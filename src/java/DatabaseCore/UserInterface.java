@@ -36,7 +36,7 @@ public class UserInterface{
     private void cleanQuery(String s) {
         System.out.println(s + "\n");;
         System.out.println(
-                s.replaceAll("\n", " ")
+                s.replaceAll("\\s+", " ")
                 );
     }
 
