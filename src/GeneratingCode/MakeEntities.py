@@ -24,7 +24,7 @@ for i in range(number):
 finished_data = top_definition + entities
 
 
-csv_file_path = 'Data Write/Entities.csv'
+csv_file_path = 'DataWrite/Entities.csv'
 
 
 with open(csv_file_path, mode='w', newline='') as csv_file:
@@ -32,7 +32,7 @@ with open(csv_file_path, mode='w', newline='') as csv_file:
     for row in finished_data:
         csv_writer.writerow(row)
 
-pickle_path = 'Data Write/Entities.pickle'
+pickle_path = 'DataWrite/Entities.pickle'
 
 with open(pickle_path,'wb') as file:
     pickle.dump(entities_objects, file)
