@@ -1,6 +1,7 @@
 import pickle
 import csv
 import Buy
+from random import choice
 
 
 
@@ -17,8 +18,8 @@ top_part = [["BuyerID", "BondID"]]
 buy_objects = []
 buys = []
 
-for i in range(30):
-    x = Buy.Buy(buyer_objects[i],bond_objects[i])
+for i in range(750):
+    x = Buy.Buy(choice(buyer_objects),bond_objects[i])
     buy_objects.append(x)
     buys.append(x.get_list())
 

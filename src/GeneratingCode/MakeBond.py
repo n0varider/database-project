@@ -19,11 +19,11 @@ time_length = [1, 3, 9, 27, 81, 182, 365, 730, 1095, 1460, 1825, 2190, 2555, 292
 values = [1_000, 10_000, 100_000, 1_000_000]
 allowed_intervals = [1, 2, 4, 8, 12]
 
-for i in seller_objects:
+for _ in range(1_000):
+    i = choice(seller_objects)
     g = Bond.Bond(i, choice(values), choice(time_length), choice(allowed_intervals))
-    for x in range(200):
-        bonds.append(g.get_list())
-        bond_objects.append(g)
+    bonds.append(g.get_list())
+    bond_objects.append(g)
 
 finished_data = top_definition + bonds
 
