@@ -51,5 +51,5 @@ class Employee:
         return f'{self.employee_id},{self.email},{self.creation_date}'
 
     def get_list(self):
-        return [self.employee_id, "'" + self.email + "'", self.creation_date]
+        return [self.employee_id, "'" + self.email + "'", "'" + self.creation_date + "'" ]
 

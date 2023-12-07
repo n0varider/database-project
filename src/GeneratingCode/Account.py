@@ -41,7 +41,7 @@ class Account:
         return self.id_entity
 
     def get_list(self):
-        return [self.account_id, self.id_entity, self.balance, self.join_date]
+        return [self.account_id, self.id_entity, self.balance, "'" + self.join_date + "'"]
 
     def __str__(self):
         return f'{self.id_entity},{self.account_id},{self.join_date},{self.balance}'
