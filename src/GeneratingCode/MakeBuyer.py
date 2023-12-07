@@ -24,7 +24,7 @@ for i in account_objects:
 
 finished_data = top_definition + buyers
 
-buyer_path = "DataWrite/Buyers.csv"
+buyer_path = "DataWrite/Buyer.csv"
 buyer_dump_path = "DataWrite/Buyers.pickle"
 
 with open(buyer_dump_path,'wb') as file:

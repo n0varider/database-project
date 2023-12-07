@@ -38,7 +38,7 @@ for _ in range(bond_numbers):
 
 finished_data = top_definition + bonds
 
-bond_path = "DataWrite/Bonds.csv"
+bond_path = "DataWrite/Bond.csv"
 
 with open(bond_path, mode='w', newline='') as csv_file:
     csv_writer = csv.writer(csv_file)

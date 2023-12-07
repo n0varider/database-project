@@ -21,7 +21,7 @@ for i in entities_objects:
 
 finished_data = top_definition + accounts
 
-csv_file_path = 'DataWrite/Accounts.csv'
+csv_file_path = 'DataWrite/Account.csv'
 
 with open(csv_file_path, mode='w', newline='') as csv_file:
     csv_writer = csv.writer(csv_file)
