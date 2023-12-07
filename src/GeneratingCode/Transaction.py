@@ -1,7 +1,7 @@
 import Bond
 from random import randrange
 class Transactions:
-    action_acc = 1
+    action_acc = 0
     def __init__(self, buyer, seller, bond, employee):
         self.action_id = Transactions.action_acc
         Transactions.action_acc += 1
