@@ -6,7 +6,7 @@ import java.awt.*;
 import java.sql.*;
 
 public class UserInterface{
-    private DatabaseConnection c = new DatabaseConnection();
+    private DatabaseConnection c = DatabaseConnection.getInstance();
     private Statement st;
     private JFrame frame;
     private JTable table;
@@ -23,11 +23,10 @@ public class UserInterface{
             try {
                 String query = queryInput.getText();
                 switch(query.substring(0, query.indexOf(" ")).toLowerCase()) {
-                    case "select":
-                        System.out.println("yes");
+                    case "select": // Requires returning data table
                         drawTable(query);
                         break;
-                    default:
+                    default: // All other queries
                         queryInput.setText(String.format("%d Rows Affected", c.genericQuery(query)));
                         break;
                 }
@@ -44,8 +43,8 @@ public class UserInterface{
         frame.setSize(700, 500);
     }
 
-    public static void error() {
-        queryInput.setText("ERROR > Something went wrong with the query");
+    public static void error(String query) {
+        queryInput.setText(String.format("ERROR > Something went wrong with the query: %s", query));
     }
 
 

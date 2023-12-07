@@ -8,6 +8,7 @@ public class Core {
     static BufferedReader reader;
     public static void main(String[] args) throws FileNotFoundException, SQLException {
         UserInterface i = new UserInterface();
+        DatabaseConnection.getInstance().connect();
         TableCreation tc = TableCreation.getInstance();
         tc.initializeTable();
 

@@ -8,7 +8,7 @@ import java.util.List;
 
 public class TableCreation {
 
-    private static final DatabaseConnection i = new DatabaseConnection();
+    private static final DatabaseConnection i = DatabaseConnection.getInstance();
     private static TableCreation tc;
     private BufferedReader reader;
     private File file;
@@ -22,14 +22,21 @@ public class TableCreation {
 
 
     public void initializeTable() {
+
+        i.genericQuery("CREATE TABLE Entity (" +
+                "identity INT," +
+                "title TEXT," +
+                "type TEXT," +
+                "PRIMARY KEY (identity))");
+
         i.genericQuery("CREATE TABLE Account (" +
                 "account_id INT," +
                 "balance NUMERIC(12,2)," +
                 "join_date DATE," +
                 "identity INT," +
-                "type TEXT" +
+                "type TEXT," +
                 "PRIMARY KEY (account_id)," +
-                "FOREIGN KEY (id) REFERENCES Person(id));");
+                "FOREIGN KEY (identity) REFERENCES Entity(identity));");
 
         i.genericQuery("CREATE TABLE Seller (" +
                 "seller_id INT," +
@@ -52,11 +59,6 @@ public class TableCreation {
                 "email TEXT," +
                 "PRIMARY KEY (employee_id))");
 
-        i.genericQuery("CREATE TABLE Entity (" +
-                "identity INT," +
-                "title TEXT," +
-                "type TEXT," +
-                "PRIMARY KEY (identity))");
 
         i.genericQuery("CREATE TABLE Bond (" +
                 "bond_id INT," +
@@ -76,7 +78,7 @@ public class TableCreation {
                 "FOREIGN KEY (buyer_id) REFERENCES Buyer(buyer_id)," +
                 "FOREIGN KEY (bond_id) REFERENCES Bond(bond_id))");
 
-        i.genericQuery("CREATE TABLE Transaction (" +
+        i.genericQuery("CREATE TABLE TransactionData (" +
                 "transaction_id INT," +
                 "transaction_date DATE," +
                 "buyer_id INT," +

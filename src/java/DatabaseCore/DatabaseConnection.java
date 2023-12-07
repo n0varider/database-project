@@ -4,8 +4,19 @@ import java.sql.*;
 
 public class DatabaseConnection {
 
+    // SELECT name FROM sqlite_master WHERE type='table';
+    // for debugging purposes; lists all tables in database
+
     private final String url = "jdbc:sqlite:" + System.getProperty("user.dir") + "\\database.db";
     private Connection conn;
+    private static DatabaseConnection dc;
+
+    public static DatabaseConnection getInstance() {
+        if(dc == null) {
+            dc = new DatabaseConnection();
+        }
+        return dc;
+    }
 
     public Connection connect() {
         try {
@@ -24,20 +35,20 @@ public class DatabaseConnection {
 
     public ResultSet selectQuery(String query) throws SQLException {
         try {
-            PreparedStatement s = conn.prepareStatement(query);
-            return s.executeQuery(cleanQuery(query));
+            PreparedStatement s = conn.prepareStatement(cleanQuery(query));
+            return s.executeQuery();
         } catch (SQLException e) {
-            UserInterface.error();
+            UserInterface.error(query);
             return null;
         }
     }
 
     public int genericQuery(String query) {
         try {
-            PreparedStatement s = conn.prepareStatement(query);
-            return s.executeUpdate(cleanQuery(query));
+            PreparedStatement s = conn.prepareStatement(cleanQuery(query));
+            return s.executeUpdate();
         } catch (SQLException e) {
-            UserInterface.error();
+            UserInterface.error(query);
             return -1;
         }
     }
