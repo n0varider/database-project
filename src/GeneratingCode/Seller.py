@@ -57,7 +57,7 @@ class Seller:
         return self.credit_rating
 
     def get_list(self):
-        return [self.seller_id, self.has_certificate, self.credit_rating, self.account_id]
+        return [self.seller_id, self.has_certificate, "'" + self.credit_rating + "'", self.account_id]
 
     def __str__(self):
         return f"{self.seller_id},{self.has_certificate},{self.credit_rating},{self.account_id}"
