@@ -47,7 +47,7 @@ class Entity:
         return self.type == "Country" or self.type == "Company"
 
     def get_list(self):
-        return [self.id, self.title, self.type]
+        return [self.id, "'" + self.title + "'" , "'" + self.type + "'" ]
 
     def only_seller_gen(self):
         method_names = ['choose_company', 'choose_country']
