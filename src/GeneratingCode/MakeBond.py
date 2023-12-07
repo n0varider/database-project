@@ -21,7 +21,7 @@ allowed_intervals = [1, 2, 4, 8, 12]
 
 for i in seller_objects:
     g = Bond.Bond(i, choice(values), choice(time_length), choice(allowed_intervals))
-    for x in range(2):
+    for x in range(200):
         bonds.append(g.get_list())
         bond_objects.append(g)
 

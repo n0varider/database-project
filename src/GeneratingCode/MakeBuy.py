@@ -17,7 +17,7 @@ top_part = [["BuyerID", "BondID"]]
 buy_objects = []
 buys = []
 
-for i in range(10):
+for i in range(30):
     x = Buy.Buy(buyer_objects[i],bond_objects[i])
     buy_objects.append(x)
     buys.append(x.get_list())

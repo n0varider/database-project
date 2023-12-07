@@ -36,7 +36,7 @@ csv_file_path = 'DataWrite/Seller.csv'
 pickle_file_path = 'DataWrite/Seller.pickle'
 
 finished_data = top_definition + seller_list
-print(finished_data)
+
 
 with open(csv_file_path, mode='w', newline='') as csv_file:
     csv_writer = csv.writer(csv_file)

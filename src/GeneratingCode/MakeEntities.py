@@ -5,7 +5,7 @@ import Entity
 
 top_definition = [['Entity ID', 'Title', 'Type']]
 
-number = 20
+number = 50
 
 entities_objects = []
 entities = []
