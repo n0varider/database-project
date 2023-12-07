@@ -6,7 +6,7 @@ import Employee
 
 top_definition = [["EmployeeID", "Email", "CreationDate"]]
 
-number = 10
+number = 15
 employee_objects = []
 employees = []
 
