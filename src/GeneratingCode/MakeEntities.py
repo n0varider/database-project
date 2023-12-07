@@ -19,7 +19,7 @@ for i in range(number):
 finished_data = top_definition + entities
 
 
-csv_file_path = 'Data Write/Entities.csv'
+csv_file_path = 'DataWrite/Entities.csv'
 
 
 with open(csv_file_path, mode='w', newline='') as csv_file:

@@ -1,0 +1,11 @@
+SellerID,HasCertificate,CreditRating,AccountID
+1,False,BB,2
+2,True,A,4
+3,True,CCC,5
+4,False,AAA,7
+5,False,BBB,8
+6,False,CC,9
+7,True,A,10
+8,True,B,13
+9,True,A,15
+10,False,CC,20
