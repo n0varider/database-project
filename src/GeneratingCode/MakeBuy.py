@@ -17,7 +17,7 @@ with open(buyer_path, 'rb') as file:
 bond_path = 'DataWrite/Bonds.pickle'
 with open(bond_path, 'rb') as file:
     bond_objects = pickle.load(file)
-account_path = 'Data Write/Accounts.pickle'
+account_path = 'DataWrite/Accounts.pickle'
 with open(account_path, 'rb') as file:
     account_objects = pickle.load(file)
 
