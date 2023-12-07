@@ -1,4 +1,4 @@
-package DatabaseCore;
+package DatabaseCore.Interaction;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -6,14 +6,15 @@ import java.awt.*;
 import java.sql.*;
 
 public class UserInterface{
-    private Connection c = new DatabaseConnection().connect();
+    private DatabaseConnection c = new DatabaseConnection();
     private Statement st;
     private JFrame frame;
     private JTable table;
-    private JTextArea queryInput;
+    private static JTextArea queryInput;
     private JButton confirm;
     public UserInterface() throws SQLException {
         frame = new JFrame("Database UI");
+
         queryInput = new JTextArea();
         queryInput.setPreferredSize(new Dimension(400, 200));
 
@@ -27,31 +28,26 @@ public class UserInterface{
                         drawTable(query);
                         break;
                     default:
-                        genericQuery(query);
+                        queryInput.setText(String.format("%d Rows Affected", c.genericQuery(query)));
                         break;
                 }
             } catch (SQLException ex) {
                 throw new RuntimeException(ex);
             }
         });
-
         frame.setLayout(new FlowLayout());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(queryInput);
         frame.add(confirm);
         frame.pack();
         frame.setVisible(true);
-        frame.setSize(500, 300);
+        frame.setSize(700, 500);
     }
 
-    public void error() {
-        queryInput.setText("Error in query:\n" + queryInput.getText());
-
+    public static void error() {
+        queryInput.setText("ERROR > Something went wrong with the query");
     }
 
-    private String cleanQuery(String s) {
-        return s.replace("\\s+", " ");
-    }
 
     private DefaultTableModel generateTable(ResultSet res) throws SQLException {
         ResultSetMetaData md = res.getMetaData();
@@ -70,17 +66,8 @@ public class UserInterface{
         return mod;
     }
 
-    private ResultSet selectQuery(String query) throws SQLException {
-        st = c.createStatement();
-        return st.executeQuery(cleanQuery(query));
-    }
-    private int genericQuery(String query) throws SQLException {
-        st = c.createStatement();
-        return st.executeUpdate(query);
-    }
-    
     private void drawTable(String query) throws SQLException {
-        DefaultTableModel model = generateTable(selectQuery(queryInput.getText()));
+        DefaultTableModel model = generateTable(c.selectQuery(queryInput.getText()));
         if(table == null) {
             table = new JTable(model);
             frame.add(new JScrollPane(table));

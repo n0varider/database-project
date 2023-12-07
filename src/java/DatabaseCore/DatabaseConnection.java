@@ -1,25 +1,44 @@
-package DatabaseCore;
+package DatabaseCore.Interaction;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class DatabaseConnection {
 
-    private final String url = "jdbc:postgresql://localhost/dvdrental";
-    private final String user = "postgres";
-    private final String password = "<add your password>";
+    private final String url = "jdbc:sqlite:" + System.getProperty("user.dir") + "\\database.db";
+    private Connection conn;
 
     public Connection connect() {
-        Connection conn = null;
         try {
-            conn = DriverManager.getConnection(url, user, password);
-            System.out.println("Connected to the PostgreSQL server successfully.");
+            conn = DriverManager.getConnection(url);
+            System.out.println("Successfully connected to the SQLite server.");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
 
         return conn;
+    }
+
+    private String cleanQuery(String s) {
+        return s.replace("\\s+", " ");
+    }
+
+    public ResultSet selectQuery(String query) throws SQLException {
+        try {
+            PreparedStatement s = conn.prepareStatement(query);
+            return s.executeQuery(cleanQuery(query));
+        } catch (SQLException e) {
+            UserInterface.error();
+            return null;
+        }
+    }
+
+    public int genericQuery(String query) {
+        try {
+            PreparedStatement s = conn.prepareStatement(query);
+            return s.executeUpdate(cleanQuery(query));
+        } catch (SQLException e) {
+            UserInterface.error();
+            return -1;
+        }
     }
 }
