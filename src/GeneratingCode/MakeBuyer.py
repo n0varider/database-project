@@ -4,7 +4,7 @@ import Buyer
 
 
 
-account_path = 'Data Write/Accounts.pickle'
+account_path = 'DataWrite/Accounts.pickle'
 
 with open(account_path, 'rb') as file:
     account_objects = pickle.load(file)
@@ -22,8 +22,8 @@ for i in account_objects:
 
 finished_data = top_definition + buyers
 
-buyer_path = "Data Write/Buyers.csv"
-buyer_dump_path = "Data Write/Buyers.pickle"
+buyer_path = "DataWrite/Buyers.csv"
+buyer_dump_path = "DataWrite/Buyers.pickle"
 
 with open(buyer_dump_path,'wb') as file:
     pickle.dump(buyer_objects, file)

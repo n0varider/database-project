@@ -17,8 +17,8 @@ for i in range(number):
 
 finished_data = top_definition + employees
 
-employee_path = "Data Write/Employes.csv"
-employee_dump_path = "Data Write/Employes.pickle"
+employee_path = "DataWrite/Employes.csv"
+employee_dump_path = "DataWrite/Employes.pickle"
 
 with open(employee_dump_path,'wb') as file:
     pickle.dump(employee_objects, file)

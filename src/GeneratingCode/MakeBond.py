@@ -10,7 +10,7 @@ top_definition = [["BondId", "Value", "IntrestRate",
 sellers = []
 bonds = []
 bond_objects = []
-seller_path = 'Data Write/Seller.pickle'
+seller_path = 'DataWrite/Seller.pickle'
 
 with open(seller_path, 'rb') as file:
     seller_objects = pickle.load(file)
@@ -27,7 +27,7 @@ for i in seller_objects:
 
 finished_data = top_definition + bonds
 
-bond_path = "Data Write/Bonds.csv"
+bond_path = "DataWrite/Bonds.csv"
 
 with open(bond_path, mode='w', newline='') as csv_file:
     csv_writer = csv.writer(csv_file)
@@ -35,7 +35,7 @@ with open(bond_path, mode='w', newline='') as csv_file:
         csv_writer.writerow(row)
 
 
-bond_object_path = "Data Write/Bonds.pickle"
+bond_object_path = "DataWrite/Bonds.pickle"
 
 with open(bond_object_path, "wb") as file:
     pickle.dump(bond_objects, file)

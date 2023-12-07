@@ -4,11 +4,11 @@ import Buy
 
 
 
-buyer_path = 'Data Write/Buyers.pickle'
+buyer_path = 'DataWrite/Buyers.pickle'
 with open(buyer_path, 'rb') as file:
     buyer_objects = pickle.load(file)
 
-bond_path = 'Data Write/Bonds.pickle'
+bond_path = 'DataWrite/Bonds.pickle'
 with open(bond_path, 'rb') as file:
     bond_objects = pickle.load(file)
 
@@ -22,11 +22,11 @@ for i in range(10):
     buy_objects.append(x)
     buys.append(x.get_list())
 
-buy_csv = "Data Write/Buy.csv"
+buy_csv = "DataWrite/Buy.csv"
 
 finished_data = top_part + buys
 
-buyer_pickle = "Data Write/Buy.pickle"
+buyer_pickle = "DataWrite/Buy.pickle"
 
 
 with open(buyer_pickle, "wb") as file:

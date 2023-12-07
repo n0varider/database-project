@@ -6,12 +6,12 @@ top_definition = [['SellerID','HasCertificate', 'CreditRating', 'AccountID']]
 
 seller_list = []
 sellers = []
-entity_path = 'Data Write/Entities.pickle'
+entity_path = 'DataWrite/Entities.pickle'
 
 with open(entity_path, 'rb') as file:
     entities_objects = pickle.load(file)
 
-account_path = 'Data Write/Accounts.pickle'
+account_path = 'DataWrite/Accounts.pickle'
 with open(account_path, 'rb') as file:
     account_objects = pickle.load(file)
 
@@ -32,8 +32,8 @@ for i,j in result:
         seller_list.append(x.get_list())
         sellers.append(x)
 
-csv_file_path = 'Data Write/Seller.csv'
-pickle_file_path = 'Data Write/Seller.pickle'
+csv_file_path = 'DataWrite/Seller.csv'
+pickle_file_path = 'DataWrite/Seller.pickle'
 
 finished_data = top_definition + seller_list
 print(finished_data)

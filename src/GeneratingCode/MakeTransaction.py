@@ -16,19 +16,19 @@ transactions_objects = []
 transactions = []
 
 
-seller_path = 'Data Write/Seller.pickle'
+seller_path = 'DataWrite/Seller.pickle'
 with open(seller_path, 'rb') as file:
     seller_objects = pickle.load(file)
 
-buyer_path = 'Data Write/Buyers.pickle'
+buyer_path = 'DataWrite/Buyers.pickle'
 with open(buyer_path, 'rb') as file:
     buyer_objects = pickle.load(file)
 
-bond_path = 'Data Write/Bonds.pickle'
+bond_path = 'DataWrite/Bonds.pickle'
 with open(bond_path, 'rb') as file:
     bond_objects = pickle.load(file)
 
-employee_path = 'Data Write/Employes.pickle'
+employee_path = 'DataWrite/Employes.pickle'
 with open(employee_path, 'rb') as file:
     employee_objects = pickle.load(file)
 
@@ -46,8 +46,8 @@ for a,b,c,d in zip(buyer_objects, seller_objects, bond_objects, employee_objects
 
 finished_data = top_definition + transactions
 
-transaction_csv = "Data Write/Transactions.csv"
-transaction_pickle = "Data Write/Transactions.pickle"
+transaction_csv = "DataWrite/Transactions.csv"
+transaction_pickle = "DataWrite/Transactions.pickle"
 
 with open(transaction_pickle,'wb') as file:
     pickle.dump(buyer_objects, file)

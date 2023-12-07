@@ -27,7 +27,7 @@ with open(csv_file_path, mode='w', newline='') as csv_file:
     for row in finished_data:
         csv_writer.writerow(row)
 
-pickle_path = 'Data Write/Entities.pickle'
+pickle_path = 'DataWrite/Entities.pickle'
 
 with open(pickle_path,'wb') as file:
     pickle.dump(entities_objects, file)
