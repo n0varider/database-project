@@ -29,6 +29,10 @@ public class DatabaseConnection {
         return conn;
     }
 
+    public Connection getConnection() {
+        return this.conn;
+    }
+
     private String cleanQuery(String s) {
         return s.replace("\\s+", " ");
     }
@@ -38,7 +42,7 @@ public class DatabaseConnection {
             PreparedStatement s = conn.prepareStatement(cleanQuery(query));
             return s.executeQuery();
         } catch (SQLException e) {
-            UserInterface.error(query);
+            System.out.println(query);
             return null;
         }
     }
@@ -48,7 +52,7 @@ public class DatabaseConnection {
             PreparedStatement s = conn.prepareStatement(cleanQuery(query));
             return s.executeUpdate();
         } catch (SQLException e) {
-            UserInterface.error(query);
+            System.out.println(query);
             return -1;
         }
     }

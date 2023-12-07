@@ -22,43 +22,40 @@ public class TableCreation {
 
 
     public void initializeTable() {
-
         i.genericQuery("CREATE TABLE Entity (" +
-                "identity INT," +
+                "entity_id INT," +
                 "title TEXT," +
                 "type TEXT," +
-                "PRIMARY KEY (identity))");
+                "PRIMARY KEY (entity_id));");
 
         i.genericQuery("CREATE TABLE Account (" +
                 "account_id INT," +
+                "entity_id INT," +
                 "balance NUMERIC(12,2)," +
                 "join_date DATE," +
-                "identity INT," +
-                "type TEXT," +
                 "PRIMARY KEY (account_id)," +
-                "FOREIGN KEY (identity) REFERENCES Entity(identity));");
+                "FOREIGN KEY (entity_id) REFERENCES Entity(entity_id));");
 
         i.genericQuery("CREATE TABLE Seller (" +
                 "seller_id INT," +
-                "account_id INT," +
                 "has_certificate BOOLEAN," +
-                "credit_rating INT," +
+                "credit_rating TEXT," +
+                "account_id INT," +
                 "PRIMARY KEY (seller_id, account_id)," +
-                "FOREIGN KEY (account_id) REFERENCES Account(account_id))");
+                "FOREIGN KEY (account_id) REFERENCES Account(account_id));");
 
         i.genericQuery("CREATE TABLE Buyer (" +
-                "account_id INT," +
                 "buyer_id INT," +
                 "has_certificate BOOLEAN," +
-                "PRIMARY KEY (account_id))");
+                "account_id INT," +
+                "PRIMARY KEY (buyer_id)," +
+                "FOREIGN KEY (account_id) REFERENCES Account(account_id));");
 
         i.genericQuery("CREATE TABLE Employee (" +
                 "employee_id INT," +
-                "join_date DATE," +
-                "identity INT," +
                 "email TEXT," +
-                "PRIMARY KEY (employee_id))");
-
+                "join_date DATE," +
+                "PRIMARY KEY (employee_id));");
 
         i.genericQuery("CREATE TABLE Bond (" +
                 "bond_id INT," +
@@ -69,38 +66,39 @@ public class TableCreation {
                 "pay_interval INT," +
                 "seller_id INT," +
                 "PRIMARY KEY (bond_id)," +
-                "FOREIGN KEY (seller_id) REFERENCES Seller(seller_id))");
+                "FOREIGN KEY (seller_id) REFERENCES Seller(seller_id));");
 
         i.genericQuery("CREATE TABLE Buy (" +
                 "buyer_id INT," +
                 "bond_id INT," +
                 "PRIMARY KEY (buyer_id, bond_id)," +
                 "FOREIGN KEY (buyer_id) REFERENCES Buyer(buyer_id)," +
-                "FOREIGN KEY (bond_id) REFERENCES Bond(bond_id))");
+                "FOREIGN KEY (bond_id) REFERENCES Bond(bond_id));");
 
         i.genericQuery("CREATE TABLE TransactionData (" +
                 "transaction_id INT," +
-                "transaction_date DATE," +
                 "buyer_id INT," +
-                "seller_id INT," +
                 "bond_id INT," +
                 "employee_id INT," +
+                "seller_id INT," +
+                "transaction_date DATE," +
                 "PRIMARY KEY (transaction_id)," +
-                "FOREIGN KEY (seller_id) REFERENCES Seller(seller_id)," +
                 "FOREIGN KEY (buyer_id) REFERENCES Buyer(buyer_id)," +
+                "FOREIGN KEY (seller_id) REFERENCES Seller(seller_id)," +
                 "FOREIGN KEY (bond_id) REFERENCES Bond(bond_id)," +
-                "FOREIGN KEY (employee_id) REFERENCES Employee(employee_id))");
+                "FOREIGN KEY (employee_id) REFERENCES Employee(employee_id));");
     }
 
     public void fillData(String filePath) throws FileNotFoundException {
         file = new File(filePath);
+        System.out.printf("Currently importing...%s%n", file.getName());
         reader = new BufferedReader(new FileReader(file));
         String fileName = file.getName();               // Name of the table
         List<String> info = reader.lines().toList();    // Data entries in table
 
         // info.get(k) returns comma separated values that won't require any modification
         for(int k = 1; k < info.size(); k++) {
-            i.genericQuery(String.format("INSERT INTO %s VALUES (%s)", fileName, info.get(k)));
+            i.genericQuery(String.format("INSERT INTO %s VALUES (%s);", fileName.substring(0, fileName.indexOf(".csv")), info.get(k)));
         }
     }
 }
