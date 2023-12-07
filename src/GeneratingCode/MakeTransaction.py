@@ -1,6 +1,7 @@
 import pickle
 import csv
 import Transaction
+from itertools import cycle
 
 
 
@@ -10,11 +11,10 @@ top_definition = [["ActionID","BuyerID",
                    ]]
 
 
-x = 10
+
 
 transactions_objects = []
 transactions = []
-
 
 seller_path = 'DataWrite/Seller.pickle'
 with open(seller_path, 'rb') as file:
@@ -32,16 +32,25 @@ employee_path = 'DataWrite/Employes.pickle'
 with open(employee_path, 'rb') as file:
     employee_objects = pickle.load(file)
 
-
-u = Transaction.Transactions(buyer_objects[0],
-                             seller_objects[0],bond_objects[0],
-                             employee_objects[0])
-
-for a,b,c,d in zip(buyer_objects, seller_objects, bond_objects, employee_objects):
+buy_path = 'DataWrite/Buy.pickle'
+with open(buy_path, 'rb') as file:
+    buy_objects = pickle.load(file)
+employee_cycle = cycle(employee_objects)
+for a,b,c in zip(buyer_objects, seller_objects, bond_objects):
+    d = next(employee_cycle)
     u = Transaction.Transactions(a, b, c, d)
     transactions.append(u.get_list())
     transactions_objects.append(u)
 
+zed = []
+
+for i in buy_objects:
+    a = i.get_buyer_id()
+    b = i.get_bond_id()
+    zed.append((a, b))
+
+
+buyer_bond = buyer_objects
 
 
 finished_data = top_definition + transactions
