@@ -17,7 +17,7 @@ for i in range(number):
 
 finished_data = top_definition + employees
 
-employee_path = "DataWrite/Employe.csv"
+employee_path = "DataWrite/Employee.csv"
 employee_dump_path = "DataWrite/Employes.pickle"
 
 with open(employee_dump_path,'wb') as file:

@@ -64,7 +64,7 @@ buyer_bond = buyer_objects
 
 finished_data = top_definition + transactions
 
-transaction_csv = "DataWrite/Transaction.csv"
+transaction_csv = "DataWrite/TransactionData.csv"
 transaction_pickle = "DataWrite/Transactions.pickle"
 
 with open(transaction_pickle,'wb') as file:
