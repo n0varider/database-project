@@ -3,7 +3,7 @@ from random import choice
 
 class Seller:
     seller_id = 1
-    rates = {1: "AAA", 2: "AA", 3: "A", 4: "BBB", 5: "BB", 6: "B", 7: "CCC", 8: "CC", 9: "C", 10: "D"}
+    rates = {1: 'AAA', 2: 'AA', 3: 'A', 4: 'BBB', 5: 'BB', 6: 'B', 7: 'CCC', 8: 'CC', 9: 'C', 10: 'D'}
 
     def __init__(self, entity, account):
         if entity.get_type() == "Country" or entity.get_type() == "Company":

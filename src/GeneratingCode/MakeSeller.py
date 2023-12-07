@@ -28,7 +28,7 @@ result = [(pair[0][1], pair[1][1]) for pair in x]
 
 for i,j in result:
     if i.can_be_seller() == True:
-        x = Seller.Seller(i,j)
+        x = Seller.Seller(i, j)
         seller_list.append(x.get_list())
         sellers.append(x)
 

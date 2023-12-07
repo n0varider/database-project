@@ -1,201 +1,201 @@
 EntityID,Title,Type
-1,Home Depot,Company
-2,Nike,Company
-3,Exxon Mobil,Company
-4,Stacey Navarro,Person
-5,Anguilla,Country
-6,Christian James,Person
-7,Johnson & Johnson,Company
-8,Djibouti,Country
-9,Isle of Man,Country
-10,Philip Smith,Person
-11,Laura Black,Person
-12,China,Country
-13,Debra Hart,Person
-14,Toyota Motor,Company
-15,Tesla,Company
-16,Amy Rios,Person
-17,Walt Disney,Company
-18,Toyota Motor,Company
-19,Michael Gallagher,Person
-20,Jerome Benson,Person
-21,Richard Richardson,Person
-22,Donna Murray,Person
-23,Burundi,Country
-24,Armenia,Country
-25,Jersey,Country
-26,Danielle Horne,Person
-27,Karen Wu,Person
-28,Russian Federation,Country
-29,Nicholas Dennis,Person
-30,PepsiCo,Company
-31,Verizon Communications,Company
-32,Belarus,Country
-33,Morocco,Country
-34,Sharon Carr,Person
-35,Malawi,Country
-36,Austria,Country
-37,Ford Motor,Company
-38,Macao,Country
-39,Panama,Country
-40,Antarctica,Country
-41,Michael Morris,Person
-42,Bruce Blake,Person
-43,Netflix,Company
-44,Melissa Silva,Person
-45,Microsoft,Company
-46,Bermuda,Country
-47,Microsoft,Company
-48,Bhutan,Country
-49,General Electric,Company
-50,Microsoft,Company
-51,Burundi,Country
-52,PepsiCo,Company
-53,Sheri Martinez,Person
-54,Amber Robinson,Person
-55,General Electric,Company
-56,Procter & Gamble,Company
-57,Tonya Cline,Person
-58,Edward Holland,Person
-59,IBM,Company
-60,Rwanda,Country
-61,United Arab Emirates,Country
-62,Pfizer,Company
-63,Microsoft,Company
-64,Virginia Orr,Person
-65,Panama,Country
-66,Tesla,Company
-67,Wendy Evans,Person
-68,Guinea,Country
-69,William Wells,Person
-70,Saint Vincent and the Grenadines,Country
-71,William Mcgee,Person
-72,William Berger,Person
-73,Google (Alphabet),Company
-74,Melissa Ortiz,Person
-75,Samantha Myers,Person
-76,Patrick Wright,Person
-77,"Palestine, State of",Country
-78,�land Islands,Country
-79,Bouvet Island,Country
-80,David Chandler,Person
-81,Tuvalu,Country
-82,James Davis,Person
-83,Berkshire Hathaway,Company
-84,Google (Alphabet),Company
-85,Tonga,Country
-86,Kendra Hernandez,Person
-87,American Samoa,Country
-88,El Salvador,Country
-89,Lee Johnson,Person
-90,New Caledonia,Country
-91,Michael Crosby,Person
-92,General Motors,Company
-93,Starbucks,Company
-94,United States,Country
-95,Oracle,Company
-96,April Gallegos,Person
-97,Antigua and Barbuda,Country
-98,Mexico,Country
-99,Apple,Company
-100,Sean Whitehead,Person
+1,Lesotho,Country
+2,Cynthia Thomas,Person
+3,Angela Browning,Person
+4,Pakistan,Country
+5,Goldman Sachs Group,Company
+6,Melissa Mckinney,Person
+7,Comoros,Country
+8,PepsiCo,Company
+9,Libya,Country
+10,New Caledonia,Country
+11,Adam Price,Person
+12,Mauritania,Country
+13,Bosnia and Herzegovina,Country
+14,Starbucks,Company
+15,Kenneth Mccarthy,Person
+16,Apple,Company
+17,Greenland,Country
+18,General Electric,Company
+19,Jason Hart,Person
+20,David Barnett,Person
+21,Chad,Country
+22,Johnson & Johnson,Company
+23,Stacy Deleon,Person
+24,Samoa,Country
+25,Joseph Wyatt,Person
+26,Exxon Mobil,Company
+27,Coca-Cola,Company
+28,Deborah Scott,Person
+29,Facebook (Meta Platforms),Company
+30,General Electric,Company
+31,Megan George,Person
+32,Bhutan,Country
+33,Boeing,Company
+34,Carol Hunt,Person
+35,American Samoa,Country
+36,Niue,Country
+37,Egypt,Country
+38,Carl Adams,Person
+39,Nike,Company
+40,Puerto Rico,Country
+41,Goldman Sachs Group,Company
+42,Johnson & Johnson,Company
+43,Verizon Communications,Company
+44,Edward Rivera,Person
+45,Johnson & Johnson,Company
+46,Pamela Raymond,Person
+47,General Electric,Company
+48,Nigeria,Country
+49,Montserrat,Country
+50,Howard Roberts,Person
+51,"Palestine, State of",Country
+52,Oman,Country
+53,Zimbabwe,Country
+54,Saint Pierre and Miquelon,Country
+55,Intel,Company
+56,Fiji,Country
+57,Brunei Darussalam,Country
+58,Anne Singleton,Person
+59,Zachary Cowan,Person
+60,Lao People's Democratic Republic,Country
+61,Ryan Clarke,Person
+62,Tesla,Company
+63,Tesla,Company
+64,Tracy Carpenter,Person
+65,Poland,Country
+66,IBM,Company
+67,United Kingdom,Country
+68,Angela Campbell,Person
+69,Nicholas Williams,Person
+70,Sweden,Country
+71,Pitcairn,Country
+72,Verizon Communications,Company
+73,Denmark,Country
+74,Oracle,Company
+75,Mrs. Brittany Keith,Person
+76,Nicole Johnston,Person
+77,Johnson & Johnson,Company
+78,Procter & Gamble,Company
+79,Cyprus,Country
+80,Kazakhstan,Country
+81,Home Depot,Company
+82,Intel,Company
+83,Haiti,Country
+84,Uruguay,Country
+85,Pfizer,Company
+86,Montserrat,Country
+87,Saudi Arabia,Country
+88,Jennifer Brandt,Person
+89,Coca-Cola,Company
+90,Toyota Motor,Company
+91,Netflix,Company
+92,Nicole Burton,Person
+93,Saint Pierre and Miquelon,Country
+94,Sandra Allen,Person
+95,Hailey Solomon,Person
+96,Ford Motor,Company
+97,Amber Robinson,Person
+98,Apple,Company
+99,Jesse Horn,Person
+100,Madeline Landry,Person
 101,Exxon Mobil,Company
-102,Dr. Raymond Lindsey,Person
-103,Monaco,Country
-104,Paraguay,Country
-105,Scott Sellers,Person
-106,France,Country
-107,North Macedonia,Country
-108,Johnson & Johnson,Company
-109,Philip Anderson,Person
-110,Switzerland,Country
-111,Emily Newman,Person
-112,Netflix,Company
-113,Seychelles,Country
-114,Albert Thomas,Person
-115,Wallis and Futuna,Country
-116,Exxon Mobil,Company
-117,John Myers,Person
-118,Paula Bray,Person
-119,Netflix,Company
-120,Zachary Hickman,Person
-121,Oracle,Company
-122,Switzerland,Country
-123,Japan,Country
-124,Matthew Murphy,Person
-125,Estonia,Country
-126,Antonio Grant,Person
-127,Gabon,Country
-128,Maria Rivers,Person
-129,Alexis Bennett,Person
-130,Microsoft,Company
-131,Google (Alphabet),Company
-132,Alejandro Fisher,Person
-133,Diane Taylor,Person
-134,Jordan,Country
-135,Microsoft,Company
-136,Saudi Arabia,Country
-137,Jason Bryan,Person
-138,Solomon Islands,Country
-139,Rebecca Gardner MD,Person
-140,Pfizer,Company
-141,Marisa Hood,Person
-142,Botswana,Country
-143,Procter & Gamble,Company
-144,Debbie Kent,Person
-145,David Christian,Person
-146,Ronald Lewis,Person
-147,Netflix,Company
-148,Melissa Kelley,Person
-149,Madison Jones,Person
-150,Intel,Company
-151,Alexis Bennett,Person
-152,Malta,Country
-153,Walt Disney,Company
-154,Apple,Company
-155,"Korea, Democratic People's Republic of",Country
-156,Lebanon,Country
-157,"Iran, Islamic Republic of",Country
-158,Nike,Company
-159,Jerry Castro,Person
-160,Lesotho,Country
-161,Kimberly Garcia,Person
-162,Antigua and Barbuda,Country
-163,Miguel Hughes,Person
-164,Thailand,Country
-165,French Guiana,Country
-166,Sao Tome and Principe,Country
-167,Michael Wright,Person
-168,Andrea Blair,Person
-169,Matthew Craig,Person
-170,Egypt,Country
-171,Kyrgyzstan,Country
-172,Ford Motor,Company
-173,Nike,Company
-174,George Howell,Person
-175,Dale Craig,Person
-176,Michael Richards,Person
-177,General Electric,Company
-178,Karen Browning DDS,Person
-179,PepsiCo,Company
-180,Oracle,Company
-181,Microsoft,Company
-182,French Southern Territories,Country
-183,Lebanon,Country
-184,Cody Brown,Person
-185,Johnson & Johnson,Company
-186,Jamie Hendricks,Person
-187,Coca-Cola,Company
-188,Apple,Company
-189,Luxembourg,Country
+102,Exxon Mobil,Company
+103,Amy Wade,Person
+104,France,Country
+105,Oracle,Company
+106,Brandi Thompson,Person
+107,Guernsey,Country
+108,John Mann,Person
+109,Johnson & Johnson,Company
+110,Nike,Company
+111,Willie Price,Person
+112,Berkshire Hathaway,Company
+113,Oracle,Company
+114,Angola,Country
+115,South Georgia and the South Sandwich Islands,Country
+116,"Congo, The Democratic Republic of the",Country
+117,Comoros,Country
+118,Exxon Mobil,Company
+119,Veronica Porter,Person
+120,Eswatini,Country
+121,Romania,Country
+122,Mr. Christopher Graham,Person
+123,Walmart,Company
+124,David Wood,Person
+125,Tajikistan,Country
+126,Verizon Communications,Company
+127,Nike,Company
+128,Saint Kitts and Nevis,Country
+129,Justin Mckenzie,Person
+130,Johnson & Johnson,Company
+131,IBM,Company
+132,Belize,Country
+133,Walmart,Company
+134,Suriname,Country
+135,Starbucks,Company
+136,Amazon.com,Company
+137,Netherlands,Country
+138,Stephanie Patel,Person
+139,Sara Wright,Person
+140,Elizabeth Wilkins,Person
+141,Kevin Moore,Person
+142,Google (Alphabet),Company
+143,Microsoft,Company
+144,Kenya,Country
+145,Procter & Gamble,Company
+146,Monaco,Country
+147,Malawi,Country
+148,Mrs. Julia Sullivan,Person
+149,Sierra Leone,Country
+150,Cindy Miller,Person
+151,Eswatini,Country
+152,Barbados,Country
+153,Goldman Sachs Group,Company
+154,Walmart,Company
+155,Coca-Cola,Company
+156,Nike,Company
+157,Margaret Edwards,Person
+158,British Indian Ocean Territory,Country
+159,Patrick Keller,Person
+160,Norfolk Island,Country
+161,Exxon Mobil,Company
+162,Oracle,Company
+163,Cristina Scott,Person
+164,Berkshire Hathaway,Company
+165,Mexico,Country
+166,Eric Olsen,Person
+167,Procter & Gamble,Company
+168,Coca-Cola,Company
+169,Tesla,Company
+170,Eric Thomas,Person
+171,Ian Lawson,Person
+172,Regina Williams,Person
+173,Palau,Country
+174,Tesla,Company
+175,Denmark,Country
+176,General Motors,Company
+177,Goldman Sachs Group,Company
+178,Panama,Country
+179,Taylor Daniel,Person
+180,David Frederick,Person
+181,Mrs. Gina Diaz,Person
+182,Cambodia,Country
+183,Anthony Marks,Person
+184,American Samoa,Country
+185,Botswana,Country
+186,India,Country
+187,Amanda Taylor,Person
+188,Oman,Country
+189,Regina Payne,Person
 190,Exxon Mobil,Company
-191,Heather Morgan,Person
-192,General Electric,Company
-193,Berkshire Hathaway,Company
-194,Lao People's Democratic Republic,Country
-195,Sri Lanka,Country
-196,Ford Motor,Company
-197,Monica Bauer,Person
-198,Angela Ware,Person
-199,Starbucks,Company
-200,Iraq,Country
+191,PepsiCo,Company
+192,Mongolia,Country
+193,Microsoft,Company
+194,Tracy Carpenter,Person
+195,Gabon,Country
+196,PepsiCo,Company
+197,General Electric,Company
+198,General Motors,Company
+199,Toyota Motor,Company
+200,General Electric,Company
