@@ -76,7 +76,9 @@ class Bond:
         return f'{self.bond_id},{self.value},{self.intrest_rate},{self.creationDate},{self.expiration},{self.interval},{self.seller_id}'
 
     def get_list(self):
-        return [self.bond_id, self.value, self.intrest_rate, self.creationDate , self.expiration, self.interval,self.seller_id]
+        return [self.bond_id, self.value, self.intrest_rate,
+                self.creationDate , self.expiration,
+                self.interval,self.seller_id]
 
 
 

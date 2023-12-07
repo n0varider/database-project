@@ -1,6 +1,7 @@
 import pickle
 import csv
 import Buyer
+from random import shuffle
 
 
 
@@ -14,6 +15,7 @@ top_definition = [['Buyer ID', 'Has Certificate', 'AccountID']]
 buyer_objects = []
 buyers = []
 
+shuffle(account_objects)
 
 for i in account_objects:
     x = Buyer.Buyer(i)

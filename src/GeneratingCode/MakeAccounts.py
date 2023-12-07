@@ -1,6 +1,7 @@
 import pickle
 import csv
 import Account
+from random import shuffle
 
 top_definition = [['Account ID', 'Entity ID', 'Balance', "Join Date"]]
 
@@ -10,6 +11,8 @@ pickle_path = 'DataWrite/Entities.pickle'
 
 with open(pickle_path, 'rb') as file:
     entities_objects = pickle.load(file)
+
+shuffle(entities_objects)
 
 for i in entities_objects:
     x = Account.Account(i)

@@ -2,6 +2,7 @@ import pickle
 import csv
 import Transaction
 from itertools import cycle
+from random import shuffle
 
 
 
@@ -36,6 +37,12 @@ buy_path = 'DataWrite/Buy.pickle'
 with open(buy_path, 'rb') as file:
     buy_objects = pickle.load(file)
 employee_cycle = cycle(employee_objects)
+
+shuffle(buyer_objects)
+shuffle(buyer_objects)
+shuffle(seller_objects)
+
+
 for a,b,c in zip(buyer_objects, seller_objects, bond_objects):
     d = next(employee_cycle)
     u = Transaction.Transactions(a, b, c, d)
@@ -43,6 +50,8 @@ for a,b,c in zip(buyer_objects, seller_objects, bond_objects):
     transactions_objects.append(u)
 
 zed = []
+
+shuffle(buyer_objects)
 
 for i in buy_objects:
     a = i.get_buyer_id()
