@@ -6,7 +6,7 @@ import java.sql.SQLException;
 public class Core {
 
     public static void main(String[] args) throws FileNotFoundException, SQLException {
-        //UserInterface i = new UserInterface();
+
         UI i = new UI();
         DatabaseConnection.getInstance().connect();
         TableCreation tc = TableCreation.getInstance();
